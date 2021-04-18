@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>生徒情報登録確認</title>
+</head>
+
+<body>
+  <header>
+    <h1>生徒情報登録確認</h1>
+  </header>
+  <div>
+    <th:block th:object="${student}">
+      <div>
+        <span>生徒ID: </span>
+        <span th:text="*{id}"></span>
+      </div>
+      <div>
+        <span>名前: </span>
+        <span th:text="*{studentName}"></span>
+      </div>
+      <div>
+        <span>学年: </span>
+        <span th:text="*{grade}"></span>
+        <span>年生</span>
+      </div>
+    </th:block>
+    <div>
+      <span>教師名: </span>
+      <span th:text="${teacher.teacherName}"></span>
+    </div>
+  </div>
+</body>
+</html>

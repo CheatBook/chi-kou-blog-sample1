@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>生徒情報登録</title>
+</head>
+
+<body>
+  <header>
+    <h1>生徒情報登録</h1>
+  </header>
+  <div>
+    <form method="post" th:action="@{/student/confirm}"
+      th:object="${student}">
+      <div>
+        <span>生徒ID: </span>
+        <input type="number" th:field="*{id}">
+      <div>
+      </div>
+        <span>名前: </span>
+        <input type="text" th:field="*{studentName}">
+      <div>
+      </div>
+        <span>学年: </span>
+        <input type="number" th:field="*{grade}">
+      <div>
+      </div>
+        <span>教師名: </span>
+        <input type="text" th:field="${teacher.teacherName}">
+      <div>
+      </div>
+        <input type="submit">
+      <div>
+    </form>
+  </div>
+</body>
+</html>
